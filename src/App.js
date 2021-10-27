@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import Vehicle from './Vehicle';
 
-// create context and put the result in a vaklriable called VehicleContext
+// create context and put the result in a variable called VehicleContext
 export const VehicleContext = React.createContext();
 
 function App() {
