@@ -17,13 +17,4 @@ function App() {
   );
 }
 
-const Vehicle = () => {
-  return (
-    <VehicleContext.Consumer>
-      {/* Use the passed down value from the Vehicle context */}
-      {value => <h1>{value}</h1>}
-    </VehicleContext.Consumer>
-  );
-};
-
 export default App;
