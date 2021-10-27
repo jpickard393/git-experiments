@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       {/* Use Vehicle context.provider to wrap components that will use it */}
       {/* Set initial value */}
-      <VehicleContext.Provider value="Peugeot 207">
+      <VehicleContext.Provider value="Peugeot">
         <Vehicle />
       </VehicleContext.Provider>
     </div>
@@ -18,13 +18,17 @@ function App() {
 }
 
 
+// now uses useContext hook.
 const Vehicle = () => {
-  return (
-    <VehicleContext.Consumer>
-      {/* Use the passed down value from the Vehicle context */}
-      {value => <h1>{value}</h1>}
-    </VehicleContext.Consumer>
-  );
+  const value = React.useContext(VehicleContext);
+  return <h1>{value}</h1>;
+
+  // return (
+  //   <VehicleContext.Consumer>
+  //     {/* Use the passed down value from the Vehicle context */}
+  //     {value => <h1>{value}</h1>}
+  //   </VehicleContext.Consumer>
+  // );
 };
 
 export default App;
