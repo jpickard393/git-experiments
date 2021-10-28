@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
-import Vehicle from './Vehicle';
+import VehicleForm from './VehicleForm';
+import Vehicle from "./Data/Vehicle";
 
 // create context and put the result in a variable called VehicleContext
 export const VehicleContext = React.createContext();
@@ -10,8 +11,8 @@ function App() {
     <div className="App">
       {/* Use Vehicle context.provider to wrap components that will use it */}
       {/* Set initial value */}
-      <VehicleContext.Provider value="Peugeot">
-        <Vehicle />
+      <VehicleContext.Provider value={Vehicle}>
+        <VehicleForm />
       </VehicleContext.Provider>
     </div>
   );
